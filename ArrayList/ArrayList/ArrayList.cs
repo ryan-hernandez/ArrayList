@@ -134,12 +134,12 @@ namespace ArrayList
             }
         }
 
-        public void Reduce()
+        private void Reduce()
         {
             // TODO: implement
         }
 
-        public void Resize()
+        private void Resize()
         {
             _size *= 2;
             T[] tmp = _array;
