@@ -3,6 +3,7 @@ using System.Collections;
 
 namespace ArrayList
 {
+    public class ArrayList<T> : IEnumerable
     {
         private int _size;
         private int _index;
