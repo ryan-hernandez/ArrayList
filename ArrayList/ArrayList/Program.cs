@@ -67,6 +67,20 @@ namespace ArrayList
             }
 
             Console.WriteLine(str);
+
+            list2.RemoveAt(2);
+            list2.Print();
+
+            list.RemoveAt(0);
+            list.Print();
+            list.RemoveAt(0);
+            list.Print();
+            list.RemoveAt(0);
+            list.Print();
+
+            list.Update(0, 9999);
+            list.Update(10, 9999);
+            list.Print();
         }
     }
 }
