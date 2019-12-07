@@ -48,11 +48,15 @@ The default constructor array size is ten.
 
 ### **RemoveAt**
 
-<code>RemoveAt(int index)</code> removes an element from the specified index.
+<code>RemoveAt(int index)</code> removes an element from the specified index and shifts all elements down.
 
 ### **Resize**
 
 <code>Resize()</code> is a function automatically called by the <code>Add()</code> and <code>AddAt(int index, T data)</code> functions to double the size of the array if the current index to insert elements at has reached the end of the array.
+
+### **Update**
+
+<code>Update(int index, T data)</code> updates the data at the specified index.
 
 ### **Print** 
 

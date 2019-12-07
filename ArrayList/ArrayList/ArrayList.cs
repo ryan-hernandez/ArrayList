@@ -125,7 +125,17 @@ namespace ArrayList
                 }
                 else
                 {
-                    _array[index] = default;
+                    T tmp = _array[index + 1];
+
+                    for (int i = index; i < _index + 1; i++)
+                    {
+                        var next = _array[i + 2];
+                        _array[i] = tmp;
+                        tmp = next;
+                    }
+
+                    _index--;
+                    _array[_index] = default;
                 }
             }
             catch (IndexOutOfRangeException ex)
@@ -149,6 +159,18 @@ namespace ArrayList
             for (int i = 0; i < tmp.Length; i++)
             {
                 _array[i] = tmp[i];
+            }
+        }
+
+        public void Update(int index, T data)
+        {
+            try
+            {
+                _array[index] = data;
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
