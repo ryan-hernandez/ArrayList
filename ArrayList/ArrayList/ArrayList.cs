@@ -9,8 +9,6 @@ namespace ArrayList
         private int _index;
         private T[] _array;
 
-        private int _position = -1;
-
         public ArrayList()
         {
             _size = 10;
