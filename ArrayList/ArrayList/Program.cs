@@ -5,40 +5,68 @@ namespace ArrayList
 {
     class Program
     {
-        struct TestStruct
-        {
-            public ArrayList<int> values;
-        };
-
         static void Main(string[] args)
         {
-            ArrayList<TestStruct> list = new ArrayList<TestStruct>();
+            var list = new ArrayList<int>();
 
-            var innerList1 = new TestStruct();
-            var innerList2 = new TestStruct();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            list.Add(6);
+            list.Add(7);
+            list.Add(8);
+            list.Add(9);
+            list.Add(10);
+            list.Print();
 
-            innerList1.values = new ArrayList<int>();
-            innerList2.values = new ArrayList<int>();
+            list.Add(11);
+            list.Add(12);
+            list.Add(13);
+            list.Add(14);
+            list.Add(15);
+            list.Add(16);
+            list.Add(17);
+            list.Add(18);
+            list.Add(19);
+            list.Add(20);
+            list.Print();
 
-            innerList1.values.Add(1);
-            innerList1.values.Add(3);
-            innerList1.values.Add(5);
-            innerList1.values.Add(7);
-            innerList1.values.Add(9);
+            list.Add(21);
+            list.Print();
 
-            innerList2.values.Add(2);
-            innerList2.values.Add(4);
-            innerList2.values.Add(6);
-            innerList2.values.Add(8);
-            innerList2.values.Add(10);
+            // Tests for AddAt()
+            //list.AddAt(0, 1111);
+            //list.Print();
+            //list.AddAt(1000, 2222);
+            //list.Add(3333);
+            //list.Print();
 
-            list.Add(innerList1);
-            list.Add(innerList2);
+            var sum = 0;
 
-            for (int i = 0; i < list.Count(); i++)
+            foreach (int l in list)
             {
-                list.Get(i).values.Print();
+                sum += l;
             }
+
+            Console.WriteLine(sum);
+
+            var list2 = new ArrayList<string>();
+
+            list2.Add("Testing ");
+            list2.Add("enumeration ");
+            list2.Add("of ");
+            list2.Add("strings.");
+
+            var str = "";
+
+            foreach(string l in list2)
+            {
+                str += l;
+            }
+
+            Console.WriteLine(str);
         }
     }
 }
